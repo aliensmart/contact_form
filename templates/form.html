@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Form</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Contact</h2>
+    <form action="{{ url_for('contact') }}" method="POST">
+        <
+
+        {{ form.name.label }}
+        {{ form.name }}
+
+        {{ form.email.label }}
+        {{ form.email }}
+
+        {{ form.subject.label }}
+        {{ form.subject }}
+
+        {{ form.message.label }}
+        {{ form.message }}
+
+        {{ form.submit }}
+    </form>
+    {% endblock %}
+
+</body>
+</html>
