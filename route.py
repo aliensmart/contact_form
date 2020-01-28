@@ -9,7 +9,7 @@ def contact():
     form = ContactForm()
     if request.method=='POST':
         if form.validate()== False:
-            flash("all Field are reuired.")
+            flash("all Field are required.")
             return render_template('form.html', form=form)
         else:
             return 'Form Posted'
