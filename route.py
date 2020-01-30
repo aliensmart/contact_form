@@ -25,7 +25,7 @@ def contact():
             flash("all Field are required.")
             return render_template('form.html', form=form)
         else:
-            msg = Message(form.subject.data, sender='contact@exemple.com', recipients=['your-email@exemple.com'])   
+            msg = Message(form.subject.data, sender='contact@exemple.com', recipients=[os.environ.get('DB_USER')])   
             msg.body = """
             From: {} <{}>
             {}
